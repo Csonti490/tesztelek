@@ -1,0 +1,174 @@
+:root {
+
+    --sotetlila: rgb(87, 31, 105); /* fejléc, lábléc */
+    --feherlila: rgb(179, 154, 187); /* fejléc kijelölés */
+    --sotetkek: rgb(28,37,63);/* háttér */
+    --sotetszurke: rgb(35,38,39);
+    --szurke: rgb(53, 50, 50);
+
+    --szin1: rgb(22,30,50); /* hatter */
+    --szin2: rgb(70, 25, 84); /* fejlec,lablec */
+    --szin3: rgb(11,15,25); /* ajanlo */
+    --szin4: rgb(35,38,39); /* szurke regist/login */
+
+    --sz1: #673ab7;
+    --sz2: #673ab7;
+    --sz3: #f0ebf8;
+}
+/*Alap*/
+*{
+    box-sizing: border-box;
+}
+body {
+    background-color: var(--sotetkek);
+    color: white;
+    /*background-color: #00adc6;*//*#b7b4b4;*/
+    min-width: 300px;
+    font-family: 'Kanit', sans-serif;
+}
+main {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+p {
+    text-align: justify;
+}
+.hatternav, footer {
+    background-color: var(--sotetlila);
+    /*background-color: #9b24b3 !important;*/
+}
+nav .navbar-brand {
+    margin-right: 0 !important;
+}
+nav .navbar-brand > img {
+    width: 125px;
+}
+nav a.navbar-brand:hover {
+    transition: transform .2s;
+    transform: scale(1.05);
+    color: var(--feherlila) !important;
+    text-decoration: underline;
+}
+nav li.nav-item a{
+    border-top: 1px solid rgba(0,0,0,0);
+    border-bottom: 1px solid rgba(0,0,0,0);
+}
+nav li.nav-item a:hover {
+    transition: transform .2s;
+    transform: scale(1.025);
+    color: var(--feherlila) !important;
+    /*text-decoration: underline;*/
+    border-top: 1px solid var(--feherlila);
+    border-bottom: 1px solid var(--feherlila);
+    border-radius: 15%;
+}
+@media (max-width: 575px) {/*575 , 767*/
+    nav li.nav-item a {
+        text-align: center;
+    }
+    nav li.nav-item a:hover{
+        border-top: 1px solid rgba(0,0,0,0);
+        border-bottom: 1px solid rgba(0,0,0,0);
+    }
+    nav li.nav-item a:hover::before {
+        content: ">>";
+        margin-right: 5px;
+    }
+    nav li.nav-item a:hover::after {
+        content: "<<";
+        margin-left: 5px;
+    }
+}
+a.nav-link {
+    color: white !important;
+}
+nav .dropdown-item, .dropdown-menu {
+    background-color: var(--sotetlila);
+    color: white;
+}
+nav .dropdown-item:hover {
+    color: var(--feherlila);
+    background-color: var(--sotetlila) !important;
+}
+.modal span {
+    font-weight: bold;
+}
+main {
+    min-height: 100vh;
+}
+footer {
+    line-height: 56px;
+}
+a.linkek {
+    color: white;
+}
+.navbar-brand {
+    font-family: 'Protest Revolution', sans-serif !important;
+    letter-spacing: .25rem !important;
+}
+.navbar-brand:hover {
+    text-decoration: none !important;
+}
+
+ul#infok li {
+ list-style-type: circle;
+}
+
+/* Űrlap méretezése */
+/* Alapértelmezett állapot: LG méretnél nagyobb, tehát 50% */
+iframe#urlap {
+    width: 50%;
+    min-height: 75vh;
+}
+/* Ha MD méret (768px) és LG méret (991px) között van, akkor 75% */
+@media (min-width: 768px) and (max-width: 991px) {
+  iframe#urlap {
+    width: 75%;
+  }
+}
+/* Ha MD-nél kisebb (max-width: 767px), akkor 100% */
+@media (max-width: 767px) {
+  iframe#urlap {
+    width: 100%;
+  }
+}
+
+/* Görgető gomb */
+#fel_gomb {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    background-color: var(--sotetlila);
+    z-index: 3;
+}
+#fel_gomb:hover {
+    box-shadow: #ccc 1px 1px 1px 1px !important;
+}
+#fel_gomb:active, #fel_gomb:focus {
+    box-shadow: none !important;
+    background-color: #ccc;
+}
+#fel_gomb>i, #fel_gomb>i {
+    color: white !important;
+}
+#fel_gomb:active>i, #fel_gomb:focus>i {
+    color: var(--sotetlila) !important;
+}
+#logo {
+    filter: drop-shadow(1px 1px 1px black);
+}
+
+.lapok {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.75) 50%, rgba(0, 0, 0, 0.25));
+}
+.oldalcim {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0));
+}
+#iii {
+    font-size: 50px;
+}
+
+html {
+    color-scheme: dark !important;
+}

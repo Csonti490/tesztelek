@@ -6,11 +6,18 @@
         <meta name="description" content="Kalandjáték">
         <meta name="keywords" content="Játék, HTML, CSS, JS">
         <meta name="author" content="CsontiXD">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-        <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.css">
-        <link rel="stylesheet" href="style.css">
+
         <link rel="icon" type="image/x-icon" href="img/logo.png">
+
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+        <!-- JQuery -->
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        
+        <!-- BS 5.2.3 -->
+        <link rel="stylesheet" href="bootstrap-5.2.3-dist/css/bootstrap.css">
+        <script src="bootstrap-5.2.3-dist/js/bootstrap.bundle.min.js"></script>
 
         <!-- Protest Revolution -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,6 +28,11 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap" rel="stylesheet">
+
+        <!-- Sajat -->
+        <link rel="stylesheet" href="styles/style.css">
+        <script src="scripts/main.js" defer></script>
+        <script src="scripts/felgomb.js" defer></script>
 
         <title>ReLife | Főoldal</title>
 
@@ -42,10 +54,13 @@
                                 <a class="nav-link" href="index.html"><i class="fa-solid fa-house"></i> Főoldal</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#"><i class="fa-solid fa-newspaper"></i> Infó</a>
+                                <a class="nav-link" href="" data-bs-toggle="modal" data-bs-target="#TudniM"><i class="fa-solid fa-circle-info"></i> Tudnivalók</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#"><i class="fa-solid fa-basket-shopping"></i> Kapcsolat</a>
+                                <a class="nav-link" href="" data-bs-toggle="modal" data-bs-target="#JatekM"><i class="fa-solid fa-puzzle-piece"></i> Játékmenet</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="" data-bs-toggle="modal" data-bs-target="#BeallM"><i class="fa-solid fa-gear"></i> Beállítások</a>
                             </li>
                         </ul>
                     </div>
@@ -80,26 +95,9 @@
                 </div>
             </div>
 
-            <div class="container border border-white rounded my-5 p-5 col-12 col-md-8 lapok">
-                <div class="row">
-                    <div class="col-12">
-                        <hr class="border border-5 rounded-circle">
-                        <h3 class="text-center">Kalandjáték 2</h3>
-                        <hr class="border border-5 rounded-circle">
-                        <p>Az első játék bővített verziója.</p>
-                        <p class="text-center">( Hamarosan... )</p>
-                        <button class="d-block mx-auto p-2" onclick="location.href='#'" disabled>Tovább a játékhoz</button>
-                    </div>
-                </div>
-            </div>
-
         </main>
         <footer class="text-center">
-            © 2024 - Created by CsontiXD
+            © 2025 - Created by CsontiXD
         </footer>
     </body>
-    <script src="bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
-    <script src="main.js"></script>
-    <script src="felgomb.js"></script>
 </html>
-<!-- 2024.05.03.-->

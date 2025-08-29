@@ -6,18 +6,11 @@
         <meta name="description" content="Kalandjáték">
         <meta name="keywords" content="Játék, HTML, CSS, JS">
         <meta name="author" content="CsontiXD">
-
-        <link rel="icon" type="image/x-icon" href="img/logo.png">
-
-        <!-- Font Awesome -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-
-        <!-- JQuery -->
+        <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" type="image/x-icon" href="img/logo.png">
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        
-        <!-- BS 5.2.3 -->
-        <link rel="stylesheet" href="bootstrap-5.2.3-dist/css/bootstrap.css">
-        <script src="bootstrap-5.2.3-dist/js/bootstrap.bundle.min.js"></script>
 
         <!-- Protest Revolution -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -29,12 +22,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap" rel="stylesheet">
 
-        <!-- Sajat -->
-        <link rel="stylesheet" href="styles/style.css">
-        <script src="scripts/main.js" defer></script>
-        <script src="scripts/felgomb.js" defer></script>
-
-        <title>ReLife | Főoldal</title>
+        <title>ReLife | Kalandjáték 1 (C)</title>
 
     </head>
     <body>
@@ -54,13 +42,10 @@
                                 <a class="nav-link" href="index.html"><i class="fa-solid fa-house"></i> Főoldal</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="" data-bs-toggle="modal" data-bs-target="#TudniM"><i class="fa-solid fa-circle-info"></i> Tudnivalók</a>
+                                <a class="nav-link" href="#"><i class="fa-solid fa-newspaper"></i> Infó</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="" data-bs-toggle="modal" data-bs-target="#JatekM"><i class="fa-solid fa-puzzle-piece"></i> Játékmenet</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="" data-bs-toggle="modal" data-bs-target="#BeallM"><i class="fa-solid fa-gear"></i> Beállítások</a>
+                                <a class="nav-link" href="#"><i class="fa-solid fa-basket-shopping"></i> Kapcsolat</a>
                             </li>
                         </ul>
                     </div>
@@ -68,10 +53,6 @@
             </nav>
         </header>
         <main>
-
-            <button type="button" class="btn btn-floating btn-lg border border-white" id="fel_gomb">
-                <i class="fas fa-arrow-up"></i>
-            </button>
 
             <div class="container mt-5">
                 <div class="row">
@@ -83,39 +64,44 @@
                 </div>
             </div>
 
-            <div class="text-center">
-                <p class="text-center">Jelenleg fejlesztés alatt áll.<br>Türelmeteket kérem, köszi :D</p>
-                <pre id="ideiglenes"></pre>
+            <div class="container border border-white rounded my-5 p-5 col-12 col-md-8 lapok" id="start">
+                <div class="row">
+                    <div class="col-12">
+                        <hr class="border border-5 rounded-circle">
+                        <h3 class="text-center">Kalandjáték 1</h3>
+                        <hr class="border border-5 rounded-circle">
+                        <div class="row">
+                            <div class="col-12 col-md-6 my-3">
+                                <button onclick="Haladas(1),TheEnd(false)" class="d-block mx-auto p-2">Játék indítása</button>
+                            </div>
+                            <div class="col-12 col-md-6 my-3">
+                                <button class="d-block mx-auto p-2" onclick="location.href='index.html'">Vissza a főoldalra</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="t d-none container border border-white rounded my-5 p-5 lapok"><!--0-->
+                <pre class="r d-flex justify-content-center m-0 p-0"></pre>
+                <p class="sz d-none"></p>
+                <div class="v d-none">
+                </div>
             </div>
 
-
-            
+            <!--0-->
+            <!--<div class="t d-none">
+                <p class="sz d-none"></p>
+                <div class="v d-none">
+                </div>
+            </div>-->
 
         </main>
         <footer class="text-center">
-            © 2025 - Created by CsontiXD
+            © 2024 - Created by CsontiXD
         </footer>
     </body>
+    <script src="bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
     <script src="main.js"></script>
-    <script src="game1.js"></script>
-    <script src="felgomb.js"></script>
+    <script src="game2.js"></script>
 </html>
-<style>
-  pre {
-    font-family: monospace;
-    font-size: clamp(45%, 2.5vw, 150%);/*0.60vw*/
-    white-space: pre;
-  }
-</style>
-<script>
-    const tabla = `====================
-/       Hamarosan       \\
-\\     megjelenik...     /
-====================
-!  !
-!  !
-!  !
-!  !
-\\__/`;
-document.getElementById("ideiglenes").innerHTML = tabla;
-</script>
